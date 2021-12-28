@@ -1,0 +1,130 @@
+/* pc */
+@media (min-width: 1023px){
+    .hide-on-pc{
+        display: none;
+    }
+}
+/* tablet */
+@media (max-width: 1024px) {
+    .hide-on-tablet{
+        display: none;
+    }
+
+    .m-4 {
+        display: block;
+        flex: 0 0 33.33333%;
+        max-width: 33.33333%;
+    }
+    .m-0 {
+        display: none;
+    }
+
+    .m-8 {
+        display: block;
+        flex: 0 0 66.66667%;
+        max-width: 66.66667%;
+    }
+
+    .m-12 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .grid {
+        width: 700px;
+        max-width: 100%;
+    }
+    
+    .product-common{
+        flex-direction: column;
+    }
+
+    .product-common__img{
+        width: 100%;
+    }
+    
+    .product-common__info{
+        padding: 1rem 0;
+    }
+  }
+
+/* mobile */
+@media (max-width: 740px){
+    .hide-on-mobile{
+        display: none;
+    }
+
+    .c-6 {
+        display: block;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .c-0 {
+        display: none;
+    }
+
+    .c-12 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .header__nav{
+        justify-content: space-between;
+    }
+
+    .search{
+        display: flex;
+        position: absolute;
+        top: calc(var(--height-header) + 1rem);
+        left: 0;
+        right: 0;
+        margin: 0 1rem;
+    }
+
+    .app__container{
+        margin-top: 6rem;
+    }
+
+    .pagination-item {
+        margin: 0;
+    }
+
+    .pagination-item__link {
+        min-width: 35px;
+        font-size: 1.6rem;
+    }
+
+    .footer__heading {
+        text-align: center;
+    }
+
+    .footer__download, .footer__list-item-link {
+        justify-content: center;
+    }
+
+    .form{
+        min-width: 200px;
+    }
+
+    /* cart */
+
+    .cart__container__content{
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 260px;
+    }
+
+    .cart__item__cell-overview,
+    .cart__item__cell-unit-price,
+    .cart__item__cell-quantity,
+    .cart__item__cell-total-price,
+    .cart__item__cell-action{
+        justify-content: center;
+    }
+    
+    .cart__item__cell-overview__link{
+        display: flex;
+        justify-content: center;
+    }
+  }
