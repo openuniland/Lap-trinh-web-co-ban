@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        * {
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            height: 90vh;
+        }
+
+        form {
+            margin: auto;
+        }
+
+        .content {
+            border: 3px solid #000;
+            float: right;
+            padding: 20px;
+            width: 400px;
+            height: 200px;
+        }
+
+            .content div > label {
+                display: inline-block;
+                width: 100px;
+                margin: 5px 0;
+            }
+
+            .content div > input {
+                width: 150px;
+                margin: 5px 0;
+            }
+
+        .box__button {
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server" method="get" action="xuly2.aspx">
+        <div class="content">
+            <div class="name">
+                <label for="">Tên VXL</label>
+                <input runat="server" type="text" name="txtTenVXL" id="txtTenVXL">
+            </div>
+            <div class="manufacturer">
+                <label for="">Hãng</label>
+                <input runat="server" type="text" name="txtHang" id="txtHang">
+            </div>
+            <div class="release">
+                <label for="">Ngày ra mắt</label>
+                <input runat="server" type="text" name="txtNgayRaMat" id="txtNgayRaMat">
+            </div>
+            <div class="cost">
+                <label for="">Giá</label>
+                <input runat="server" type="text" name="txtCost" id="txtCost">
+            </div>
+            <div class="box__button">
+
+                <button runat="server" id="post">post</button>
+                <button runat="server" id="get">get</button>
+
+            </div>
+        </div>
+    </form>
+</body>
+</html>
