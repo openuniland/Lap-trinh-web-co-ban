@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1{
+    padding-top: 30px;
+    padding-bottom:20px;
+    text-align: center;
+    text-transform: uppercase;
+}
+hr{
+    width: 70%;
+    margin-left: 15%; 
+    margin-bottom: 30px;
+}
+p{
+    padding-left: 30px;
+    padding-bottom: 10px;
+}
+.Bold{
+    padding-left: 30px;
+}
+.success img{
+    margin-top: 20px;
+    width:30%;
+    margin-left:30px;
+}
+.success .list{
+    font-size:16px;
+    display: inline-block;
+    margin-left:100px;
+    margin-bottom: 50px;
+}

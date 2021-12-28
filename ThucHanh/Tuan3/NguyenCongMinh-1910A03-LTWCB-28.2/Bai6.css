@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+}
+
+.box{
+    margin: auto;
+    border: 3px solid #ddd;
+}
+
+.title{
+    margin-bottom: 10px;
+}
+
+.name{
+    display: inline-block;
+    min-width: 100px;
+}
+
+.content{
+    margin: 20px;
+}
+
+.string{
+    width: 200px;
+}
+
+.list__content{
+    width: 200px;
+}
+
+.operation{
+    text-align: right;
+    margin: 20px;
+}
+
+.operation button{
+    cursor: pointer;
+}

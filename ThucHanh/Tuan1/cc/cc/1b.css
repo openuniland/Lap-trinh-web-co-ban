@@ -1,0 +1,57 @@
+*{
+   margin: 0;box-sizing: border-box;
+}
+h1{
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 30px;
+}
+.can_giua{
+    text-align: center;
+    padding-bottom: 10px;
+}
+hr{
+    width: 70%;
+    margin-left: 15%; 
+    margin-bottom: 30px;
+}
+p{
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+.box_1{
+    margin: 20px 0;
+}
+.box_1 .check{
+    width:100%;
+}
+.box_1 .left{
+    width: 50%;
+    padding-left:150px;
+    float: left;
+}
+.comment{
+    margin-top:20px;
+    margin-left: 100px;
+}
+.box_2{
+    width: 100%;
+    display: inline-block;
+}
+.box_2-left{
+    height: 100px;
+    width: 50%;
+    padding-left: 150px;
+    float: left
+}
+.box_2-right img{
+    height: 100px;
+}
+.submit{
+    float: right;
+    margin: 10px 0;
+}
+.center{
+    text-align: center;
+    padding-top: 20px;
+}

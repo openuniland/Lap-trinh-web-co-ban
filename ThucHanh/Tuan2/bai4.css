@@ -1,0 +1,167 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.app{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+}
+
+.header{
+    grid-column: 1/13;
+    background-color: darkgoldenrod;
+    padding: 30px;
+}
+
+.nav{
+    grid-column: 1/13;
+    background-color: rgb(104, 104, 104);
+    height: 40px;
+}
+
+.nav__list{
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav__item {
+    display: block;
+    position: relative;
+}
+
+.nav__item a{
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    padding: 0 10px;
+    line-height: 40px;
+    text-align: center;
+}
+
+.nav__item a:hover{
+    background-color: darkred;
+}
+
+.nav__item:hover .subnav__list{
+    display: block;
+}
+
+.subnav__list{
+    display: none;
+    list-style: none;
+    position: absolute;
+    background-color: #fff;
+    width: 100%;
+    box-shadow: 0 1px 3px rgba(2, 2, 2, 0.329);
+}
+
+.subnav__item > a{
+    color: #000;
+    border-bottom: 1px solid #ccc;
+}
+
+.search-bar{
+    grid-column: 1/4;
+    padding-top: 20px;
+    padding-left: 5px;
+}
+
+.search-bar label{
+    display: block;
+}
+
+.search-bar .submit{
+    min-width: 50px;
+}
+
+.input{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.input .search{
+    grid-column: 1/5;
+}
+
+.input .submit{
+    grid-column: 5/6;
+}
+
+.search-bar .search{
+
+}
+.content{
+    grid-column: 4/13;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding-right: 10vh;
+}
+
+.content .book{
+}
+
+.book {
+    border: 2px solid #ddd;
+    margin: 10px;
+}
+
+.book h4{
+    text-align: center;
+}
+
+.book img{
+    width: 100%;
+}
+
+.footer{
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    background-color: #ddd;
+    grid-column: 1/13;
+}
+
+@media screen and (max-width: 768px){
+    .search-bar{
+        grid-column: 1/12;
+    }
+    
+    .content{
+        grid-column: 2/12;
+        grid-template-columns: repeat(2, 1fr);
+        padding-right: 0;
+    }
+
+    .nav__list{
+        display: block;
+    }
+    .nav__item{
+        width: 100%;
+    }
+    .nav{
+        height: 161px;
+    }
+    .subnav__list{
+        z-index: 4;
+    }
+    .search-bar{
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+    }
+    .label{
+        grid-column: 1/2;
+    }
+    .input{
+        grid-column: 2/7;
+    }
+    .input .search{
+        grid-column: 2/6;
+    }
+    
+    .input .submit{
+        grid-column: 6/7;
+    }
+}

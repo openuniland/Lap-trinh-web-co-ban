@@ -1,0 +1,188 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+    <meta http-equiv="Page-Enter" content="progid:DXImageTransform.Microsoft.Fade(duration=1)">
+    <meta http-equiv="Page-Exit" content="progid:DXImageTransform.Microsoft.Fade(duration=1)">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset = UTF-8" />
+    <meta property="og:image"content="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS5FRvUfBApMLhfELcLY1zQxWRKHq-QaPPVuDRMg8cC4pDkTBP1"/>
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="Stylesheet" href="style.css" type="text/css" />
+    <title>Minh</title>
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="counterup.js"></script>
+    <script type="text/javascript" src="timroi.js"></script>
+    <script language="javascript">
+    
+
+        title_tmp1 = document.title
+
+        if (title_tmp1.indexOf(">>") != -1) {
+
+            title_tmp2 = title_tmp1.split(">>");
+
+            title_last = "*~*" + title_tmp2[1];
+
+            title_last = title_last + "*~*" + title_tmp2[2];
+
+        } else {
+
+
+
+            if (title_tmp1.indexOf("*~*") != -1) {
+
+                title_tmp2 = title_tmp1.split("*~*");
+
+                title_last = "*~*" + title_tmp2[1];
+
+                if (title_last == "*~*") { title_last = "*~*" };
+
+                if (title_last == "*~*") { title_last = "*~*" };
+
+            }
+
+            else { title_last = " Minh " }
+
+        }
+
+        title_new = "" + title_last + ""
+
+        step = 0
+
+        function flash_title() {
+
+            step++
+
+            if (step == 8) { step = 1 }
+
+            if (step == 1) { document.title = '[~~~~*' + title_new + '*~~~~]' }
+
+            if (step == 2) { document.title = '[~~~*~' + title_new + '-*~~~]' }
+
+            if (step == 3) { document.title = '[~~*~~' + title_new + '~~*~~]' }
+
+            if (step == 4) { document.title = '[~*~~~' + title_new + '~~~*~]' }
+
+            if (step == 5) { document.title = '[*~~~~' + title_new + '~~~~*]' }
+
+            if (step == 6) { document.title = '[~~*~~' + title_new + '~~*~~]' }
+
+            if (step == 7) { document.title = '[~~~~*' + title_new + '*~~~~]' }
+
+            setTimeout("flash_title()", 180);
+
+        }
+
+        flash_title();
+
+        function scrollToBottom(elm_id) {
+            var elm = document.getElementById(elm_id);
+            try {
+                elm.scrollTop = elm.scrollHeight;
+            }
+            catch (e) {
+                var f = document.createElement("input");
+                if (f.setAttribute) f.setAttribute("type", "text")
+                if (elm.appendChild) elm.appendChild(f);
+                f.style.width = "0px";
+                f.style.height = "0px";
+                if (f.focus) f.focus();
+                if (elm.removeChild) elm.removeChild(f);
+            }
+        }
+
+    </script>
+    
+</head>
+<body onload="javascript:teclear();">
+   
+    <div id="TextCounter">
+        <strong>Minh</strong>
+        <img src="heartr.png" />
+        <strong>đã tạo được:</strong> <span id="counter">
+            <script type="text/javascript">
+                // January: tháng 1
+                // February: tháng 2
+                // March: tháng 3
+                // April: tháng 4
+                // May: tháng 5
+                // June: tháng 6
+                // July: tháng 7
+                // August: tháng 8
+                // September: tháng 9
+                // October: tháng 10
+                // November: tháng 11
+                // December: tháng 12
+                new CountUp('September 20 2020 09:21:25', 'counter', "...  ");
+            </script>
+        </span>
+    </div>
+    <div id="BgContent">
+        <div id="copyright">
+            From: Nguyễn Công Minh
+        </div>
+        <div id="TextContent">
+        </div>
+    </div>
+    <div id="canvas">
+    </div>
+    <script type="text/javascript" src="protoclass.js"></script>
+    <script type="text/javascript" src="box2d.js"></script>
+    <script type="text/javascript" src="Main.js"></script>
+    <script language="javascript" type="text/javascript">
+        mensaje =
+
+'<font color="pink" size="5">Anh đang ngồi ở Hồ Tây, chỗ 2 đứa mình hay đến mỗi khi em qua Hà Nội ý.<br> Lạnh. <br>Chỉ có tiếng nước đập vào bờ. Hôm nay anh lại thấy nhớ em...\n 18 năm làm bạn, hơn 2 năm yêu nhau và thiếu 7 ngày nữa là tròn 3 năm chúng ta xa nhau...<br> Em đi mà không nói một lời.<br> Em đi mà khiến cho bao nhiêu dự định của 2 đứa bỗng trở thành mây khói..<br> Em đi để lại đây một mình anh sống trong nuối tiếc và ân hận.<br> Em đi ở cái tuổi đẹp nhất đời con gái..<br> Tuổi 20 <..></font><br>' +'<br>    ' +
+
+'<font size="5" color="#fff">Số phận đã đưa chúng ta đến với nhau. Anh vẫn thường hay nói với em thế.<br> Chúng ta sinh ra trong 2 gia đình có bố mẹ đều là bạn thân của nhau, nhà ở cạnh nhau, sinh con cùng một năm, một trai, một gái. Vì thế mà từ khi sinh ra 2 đứa đã chơi với nhau rồi, thậm chí còn bú chung, ngủ chung, tắm chung từ nhỏ nữa. Ngay cả bố mẹ cũng ngấm ngầm cái kiểu hôn ước, rồi lúc chúng mình lớn thì lại mang ra trêu đùa.</font><br>' +
+
+'<br>    ' +
+
+'<font size="5" color="pink">Lúc ý anh với em cũng hợp tính nhau, nhưng lại chỉ coi nhau ở mức bạn thân chứ chưa gọi là thích hay yêu gì cả.<br> Chúng mình chơi với nhau từ bé, cùng đi học mẫu giáo, cùng học từ lớp 1 tới lớp 12.<br> Và cũng may không giống như những đôi khác, từ bé em đã gọi anh là anh vì bố mẹ em bắt thế và cũng vì anh sinh trước em tận...3 ngày, rồi nó trở thành thói quen. Em chưa bao giờ xưng mày tao với anh dù là bằng tuổi. Ngay cả khi cãi nhau, giận nhau cũng không có. Thi thoảng em hay nổi hứng ngỏ ý gọi kiểu khác nhưng được vài bữa rồi vì không quen nên chính em lại từ bỏ.<br> Đi học hay đi chơi, ở nhà hay ở trường 2 đứa cứ như dính lấy nhau vậy. Chắc chỉ trừ lúc ngủ là không cạnh nhau.<br> Lúc đấy anh coi em như một người em gái ruột vậy.</font><br>' +
+
+'  <font size="5" color="pink">Năm lớp 12 cả 2 cùng quyết tâm thi vào NEU để học cùng lớp nữa cho trọn vẹn cái "đời" đi học. Học ngày cày đêm, chỉ mong cho cái ước mơ nhỏ nhoi kia thành hiện thực.<br> Sáng 6h dậy ăn cơm rồi 6h30 chở em đi học, cả ngày học ở trường rồi tối lại đèo nhau đi học ở trung tâm tới 9h tối mới về. Nói thật thời gian chúng mình ở bên nhau, nói chuyện với nhau còn nhiều hơn cả anh ở và nói chuyện với bố mẹ. Đó là những năm đẹp nhất của chúng mình.</font>' +' <br>' +
+'  <font size="5" color="pink"> Ngày thi tốt nghiệp cả 2 dắt nhau đi thi mà cười nói<br> "chuyện nhỏ thôi mà, kiểu gì chả qua, như đi làm bài kiểm tra thôi".<br> Đúng thế anh được 48 điểm cho 6 môn còn em được tận 51 điểm. Em cứ khoe mãi khiến anh phát cáu. Lúc đấy chỉ là vì bực em nên anh đã nói nhường cho em 3 điểm, thi đại học anh sẽ lấy lại gấp đôi. Chỉ nói chơi thế thôi chứ anh và em đều biết thi đại học nó khó hơn thi tốt nghiệp như thế nào. Nửa điểm cũng quyết định cả số phận. Cả 2 lại lao vào học, rồi ngày thi lại dắt nhau lên Hà Nội thi. Chúng ta có tới 2 ông bố đi cùng. </font>' +' <br>' +
+'  <font size="5" color="#fff"> 2 ngày thi căng thẳng rồi cũng qua, cảm giác mệt mỏi và hơi buồn vì nhiều câu chưa làm được và nhiều câu đã làm sai. Chỉ biết tự an ủi nhau dù sao cũng nộp bài rồi chờ kết quả thôi. Thi đợt 2 anh chọn khối B nên anh đi Hải Phòng thi Y, còn em thì không thi nên em về trước. Chúng ta xa nhau vài ngày. Có lẽ đây là lần đầu tiên 2 đứa xa nhau lâu thế. Tận 4 ngày liền. Thi xong em gọi điện rối rít hỏi han rồi kêu về quê luôn "nhớ cái mặt quá", em ở nhà buồn không có ai chơi cùng. </font>' +' <br>' +
+'  <font size="5" color="pink"> Ngày có điểm cả 2 cùng một tâm trạng. Buồn. Nhưng chẳng biết ai buồn hơn. Khối A anh được 26 điểm đỗ, khối B được 22 điểm trượt.<br> Còn em chỉ có 17 điểm khối A.<br> Em còn nhớ không? <br>Em đã đóng cửa phòng, trốn trong nhà khóc suốt 7 ngày liền không gặp anh. Chỉ tới khi anh đập cửa phòng em như muốn phá nát nó ra em mới chịu mở. Mắt em đỏ hoe lên, người em gầy rộc đi, tóc tai thì rối bù lên. </font>' +' <br>' +
+'  <font size="5" color="red">  Gọi cái gì?</font>' +
+' <br>' +
+'  <font size="5" color="red"> \n- Thế khóc cái gì?</font>' +
+' <br>' +
+'  <font size="5" color="red">\n- Buồn thì khóc không được à?</font>' +
+' <br>' +
+'  <font size="5" color="red">\n- Khóc 7 ngày chưa chán à? Khóc nhiều mai mốt người ta chết lấy đâu nước mắt mà khóc?</font>' +
+' <br>' +
+'  <font size="5" color="red">\n- Ai chết?</font>' +
+' <br>' +
+'  <font size="5" color="red">\n- Anh này </font>' +' <br>' +
+'  <font size="5" color="#pink">Thế cũng dụ được em cười. Ngồi trong phòng em nói chuyện cả buổi chiều mới khiến em bớt khóc đi 1 tý. Em có biết cả tuần nay bố mẹ em lo cho em thế nào không? Anh lo thế nào không? Rồi cả bố mẹ anh cũng lo cho em nữa..<br> Sau hơn 1 tháng em cũng lấy lại được tinh thần và quyết định nộp nguyện vọng 2 theo ý kiến của mọi người.<br> Nhưng em chọn một cái trường xa cách anh cả trăm kilomet.<br> Hà Nội đâu thiếu gì trường, sao phải chọn trường Đh Hải Phòng chứ?<br> Vì lần trước thi xong về anh bảo hoa phượng ở Hải Phòng đẹp!<br> Dù có bảo thế nào em cũng không chịu chọn 1 trường ở Hà Nội, thế là anh đi học ở Hà Nội còn em đi học ở Hải Phòng. Buồn lắm... Cái ước mơ nhỏ nhoi nó không thành hiện thực rồi.  </font>' +' <br>' +
+'  <font size="5" color="#fff">Không biết em thế nào nhưng ở xa nhau tự nhiên lại thấy nhớ em, nhớ nhiều lắm, nhớ em hơn nhớ bố mẹ. Gọi điện nói chuyện với em hàng ngày, còn cả tháng gọi về cho bố mẹ được 1-2 lần. Cả 2 cũng đi học cả tuần nên chẳng có thời gian gặp mặt, chỉ có nhắn tin và gọi điện. Về quê thì đứa về trước đứa về sau cũng chẳng gặp được. Có vẻ em tránh gặp mặt anh ý. Sau mấy tháng không gặp được em, noel năm đó anh nhớ vào cuối tuần, không nói trước, anh đã bắt xe sang Hải Phòng tìm em. Em bất ngờ phải không? Nhìn là biết. Hai đứa cùng đi nhà thờ đón noel và ở đó anh đã tỏ tình với em. Em còn nghĩ là anh trêu đùa nữa chứ. Chỉ tới khi anh ôm em, hôn em thì em mới chịu tỉnh ngộ. Em đẩy anh ra, nhưng may mà không tát anh. Nhìn anh như kiểu người vừa từ hành tinh khác đến.. Rồi lẳng lặng quay mặt bỏ đi.. Anh đuổi theo, chạy lại ôm em rồi nói mãi câu "đồng ý đi mà", nói xong lại bị em đẩy ra... Vài lần như thế thì bị em quát.  </font>' +' <br>' +
+'  <font size="5" color="pink">\n - Thôi nha. Em sắp cáu.</font>' +' <br>' +
+
+'  <font size="5" color="pink">\n- Thế có đồng ý không?</font>' +' <br>' +
+
+'  <font size="5" color="pink">\n- Anh bị ngố hả? </font>' +' <br>' +
+'  <font size="5" color="black">Thế đấy tỏ tình với em mà còn bị nói là ngố. Con gái tụi em có giá thật, cao hơn cả vàng ý. Anh còn đang tưởng mình bị từ chối nữa cơ chứ. Chắc nếu bị thế anh sẽ về đóng cửa khóc 1 tuần quá.</font>' +  ' <br>' +
+'  <font size="5" color="pink">Tình yêu của chúng mình cũng không khác biệt so với tình bạn trước đây là mấy. Chỉ là giờ gặp nhau thì nắm tay nhau thật chặt, dắt nhau đi dạo phố, đi chơi,... Bố mẹ anh và bố mẹ em cũng chẳng phản đối, có lẽ họ chờ cái ngày này còn hơn cả anh và em ý. Anh chăm sang Hải Phòng hơn, em chăm qua Hà Nội hơn. Mọi ngóc ngách 2 cái thành phố này dường như đều có bóng của em và anh. Chỉ trách là ở xa nhau quá.</font>' +' <br>' +
+'  <font size="5" color="pink">Hôm đó anh đang chuẩn bị quà 8-3 cho em.. Sáng sớm 7h đã có người gọi điện nói em đi mua hoa với bạn để về bán và gặp tai nạn.<br> Tai anh như ù đi, gọi cho em không được, gọi về cho bố mẹ thì họ bảo có người gọi cũng nói như thế.<br> Anh vội vã phóng xe máy từ Hà Nội sang Hải Phòng để tìm em. Anh hy vọng đây không phải sự thật... Nhưng ở đời đâu có mấy điều là kỳ diệu... Họ nói cả em và bạn bị tai nạn và đều đã mất.<br> Con đường đấy nơi em nằm rơi đầy cánh hoa hồng và máu.<br> Sao thế?<br> Chuyện gì xảy ra vậy?<br> Không phải em chỉ nói là đi mua hoa về bán với bạn cho vui thôi sao?<br> Ngày mai mình còn có hẹn mà. <br>Tương lai mà chúng ta vẽ ra còn dài lắm,.. chúng ta còn chưa ra trường,.. chưa đi làm,.. chưa kết hôn nữa cơ mà?<br> Đau. <br>Tim như bị xé.<br> Khó thở nữa. <br>Anh khóc như một đứa trẻ.<br> Mẹ em bị ngất và phải vào viện. Mọi thứ đến quá đột ngột khiến anh không thể tin rằng đây là sự thật, rằng từ giờ sẽ không còn có em ở bên cạnh.. Sao ông trời đối xử tàn nhẫn với em, với anh và với mọi người như vậy. Những tháng ngày u ám của anh cũng bắt đầu từ đó, anh thức khuya có hôm trắng đêm để nhìn em, để nghe đi nghe lại giọng nói của em.<br> Anh sợ mình sẽ quên em.<br> Nhưng rồi anh nhận ra mình vẫn phải tiếp tục sống.  </font>' +' <br>' +
+'  <font size="5" color="#fff"> Ba năm đã qua. Chắc chẳng mấy ai còn nhớ tới cô gái nhỏ nhắn, xinh xắn và hoạt bát của anh nữa. Nhưng anh vẫn nhớ em, nhớ giọng nói của em, nhớ mỗi khi em cười, nhớ những lần chúng mình bên nhau ấy. Anh còn lưu toàn bộ số ảnh mà mình chụp, anh tìm cả những bức ảnh hồi nhỏ nữa, rồi cả những cái clip nhắng xít của 2 đứa. Giờ anh ra trường và đi làm rồi. Bố mẹ em và bố mẹ anh cũng khỏe. Anh cũng nhận bố mẹ em làm bố mẹ nuôi rồi. Sau này anh sẽ thay em chăm sóc họ. Em không phải lo gì cả đâu... Thôi anh về đây. 2h sáng rồi. Em ngủ ngon nhé. Nhớ em, thương em, yêu em nhiều lắm ...</font>' +' <br>' +
+'                    <br>' +
+'<p align="left"> <font face="Courier New" color="#fff" size="6">Mong cậu lúc nào cũng tươi vui mãi nhé.!! </font></p>' +
+'                    <br>' +
+'  <font size="4" color="#fff"> Cậu Hãy Xem Tiếp Tại https://www.facebook.com/NCM.NguyenCongMinh  </font>';
+        line = 0;
+        cursor = '_';
+        function teclear() {
+            if (line == mensaje.length) cursor = '';
+            document.getElementById('TextContent').innerHTML = mensaje.substring(0, line) + cursor;
+            var objDiv = document.getElementById("TextContent");
+            objDiv.scrollTop = objDiv.scrollHeight;
+            if (line++ < mensaje.length) setTimeout("teclear()", 60);
+        }
+ 
+    </script>
+    <iframe src="https://www.nhaccuatui.com/vh/auto/ArITjiEYSP8YN" width="1" height="1" frameborder="0" allowfullscreen allow="autoplay"></iframe>
+</body>
+</html>
