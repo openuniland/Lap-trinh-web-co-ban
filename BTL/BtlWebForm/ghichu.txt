@@ -1,0 +1,21 @@
+
+
+cần chỉnh lại search không phân biệt hoa thường
+-> đã chỉnh
+
+viết bài đánh giá sản phẩm
+-> 80 %
+-> chưa validate
+
+bình luận sản phẩm
+-> tạm xog front-end
+
+quản lý các trạng thái đơn hàng
+-> mới show thông tin đơn hàng được đặt
+
+quản lý user, set quyền
+-> mới show user
+
+list bug mới
+ - ajax gọi giỏ hàng lỗi giao diện
+ - add comment level 2 lỗi chưa hiển thị role

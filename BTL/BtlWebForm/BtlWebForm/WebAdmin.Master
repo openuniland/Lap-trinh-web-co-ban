@@ -1,0 +1,71 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="WebAdmin.master.cs" Inherits="BtlWebForm.WebAdmin" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/style_vu_reposive.css">
+    <style>
+    body{
+            overflow-y: hidden;
+        }
+        </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <section class="navbar-admin">
+        <div class="left-nav">
+            <img src="/static/img/icon/admin.png" alt="">
+            <h1>SHOP ADMIN</h1>
+        </div>
+
+        <div class="right-nav">
+            <a href="/" style="color: white">Trang chủ</a>
+            <div class="user">
+                <img src="/static/img/icon/avatar.jpg" alt="" class="avatar">
+                <ul class="ul-boss">
+                    <li id="name_admin" runat="server"></li>
+                    <li>
+                        <ul class="option-x" style="display: none;">
+                            <a href="/admin">
+                                <li>Profile</li>
+                            </a>
+                            <a href="/logout">
+                                <li>
+                                    Đăng xuất
+                                </li>
+                            </a>
+                            
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <div class="main-container">
+        <div class="left-admin-container">
+            <ul class="menu-admin">
+                <li class='__select' onclick="loadForm(1)" style="font-weight: bold;">Quản lý sản phẩm</li>
+                <li class='__select' onclick="loadForm(2)">Quản lý người dùng</li>
+                <li class='__select' onclick="loadForm(3)">Quản lý đơn hàng</li>
+            </ul>
+        </div>
+
+        <asp:ContentPlaceHolder ID="AdminBody" runat="server">
+
+        </asp:ContentPlaceHolder>
+
+    </div>
+    
+    <script src="/static/js/admin.js"></script>
+    <script src="/static/js/js.js"></script>
+    <script src="/static/js/cart.js"></script>
+</body>
+</html>

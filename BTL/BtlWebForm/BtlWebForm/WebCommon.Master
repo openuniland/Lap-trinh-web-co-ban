@@ -1,0 +1,263 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="WebCommon.master.cs" Inherits="BtlWebForm.WebCommon" %>
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/reposive.css">
+    <meta name="keywords" content="vu" />
+    
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <header id="header1">
+        <div class="container">
+            <div class="logo">
+                <a href="/">
+                    <img src="/static/img/icon/logo.png" alt="">
+                </a>
+            </div>
+            <div class="category">
+                <h3 onclick="showMenu()">Danh mục sản phẩm
+                    <img src="/static/img/icon/le.png" alt="">
+                </h3>
+                <ul id="lmenu">
+                    <a href="/san-pham">
+                        <li>Tất cả sản phẩm</li>
+                    </a>
+                    <a href="/QUAN_AO">
+                        <li>Quần áo</li>
+                    </a>
+                    <a href="/VAY_NU">
+                        <li>Váy nữ</li>
+                    </a>
+                    <a href="/san-pham-moi">
+                        <li>Sản phẩm mới</li>
+                    </a>
+                    <a href="/san-pham-khuyen-mai">
+                        <li>Sản phẩm khuyến mãi</li>
+                    </a>
+                </ul>
+            </div>
+            <div class="search">
+                <form action="/search">
+                    <input type="text" name="q" placeholder="Tìm kiếm sản phẩm" id="timkiem">
+                    <input type="submit" value="TÌM KIẾM" id="btn-search">
+                </form>
+            </div>
+            <div class="account">
+                <a href="/login" id="LINK" runat="server"><img src="/static/img/icon/user.png" alt=""></a>
+                <a href="/login" id="LINK1" runat="server" title="Vào page admin"><span id="full_name" runat="server">Đăng nhập</span></a>
+                <a href="/logout" ><i><span id="logout" runat="server"></span></i></a>
+            </div>
+            <div class="cart" id="_cart1">
+                <span class="icon-cart" onclick="showCart()" id="number_oder" runat="server">0</span> 
+                <img class="icon-cart" src="/static/img/icon/bag.png" alt="" onclick="showCart()">
+            </div>
+
+            <div class="cart" id="_cart2">
+                <a href="/cart">
+                    <span class="icon-cart" onclick="showCart()" id="number_oder2" runat="server">0</span> 
+                    <img class="icon-cart" src="/static/img/icon/bag.png" alt="">
+                </a>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- header mobile -->
+    <div class="__overlay" onclick="btn_close_category()">
+        <div class="__category">
+            <div class="__logo">
+                <a href="/"><img src="/static/img/icon/logo.png" alt=""></a>
+            </div>
+            <hr style="border: 1px solid #ebebeb;">
+            <div class="__option">
+                <a href="/">Trang chủ</a>
+            </div>
+            <hr style="border: 1px solid #ebebeb;">
+            <div class="__option">
+                <a href="/san-pham-moi">Sản phẩm mới</a>
+            </div>
+            <hr style="border: 1px solid #ebebeb;">
+            <div class="__option">
+                <a href="/san-pham-khuyen-mai">Sản phẩm khuyến mãi</a>
+            </div>
+            <hr style="border: 1px solid #ebebeb;">
+            <div class="__option">
+                <a href="/QUAN_AO">Quần áo</a>
+            </div>
+            <hr style="border: 1px solid #ebebeb;">
+            <div class="__option">
+                <a href="/VAY_NU">Váy nữ</a>
+            </div>
+            <hr style="border: 1px solid #ebebeb;">
+            <div class="__option">
+                <a href="/san-pham">Tất cả sản phẩm</a>
+            </div>
+            <% if (Session.Contents[Constant.USER_SESSION] == null)
+                {%>
+                    <hr style="border: 1px solid #ebebeb;">
+                    <div class="__option">
+                        <a href="/login">Đăng nhập</a>
+                    </div>
+                    <hr style="border: 1px solid #ebebeb;">
+                    <div class="__option">
+                        <a href="/register">Đăng ký</a>
+                    </div>
+            <%}
+            else
+            {%>
+                    <hr style="border: 1px solid #ebebeb;">
+                    <div class="__option">
+                        <a href="/" id="__fullname_m" runat="server"></a>
+                    </div>
+                    <hr style="border: 1px solid #ebebeb;">
+                    <div class="__option">
+                        <a href="/logout">Đăng xuất</a>
+                    </div>
+            <%} %>
+        </div>
+    </div>
+    <div id="header2">
+        <div class="__top_header flex">
+            <div class="__icon" onclick="btn_close_category()">
+                <img src="/static/img/icon/fa-bars.png" alt="">
+            </div>
+            <div class="__logo">
+                <a href="/"><img src="/static/img/icon/logo.png" alt=""></a>
+            </div>
+            <div class="__cart">
+                <span id="number_oder_m" class="icon-cart" runat="server">0</span>
+                <a href="/cart"><img src="/static/img/icon/bag.png" alt=""></a>
+            </div>
+        </div>
+        <div class="__search">
+            <form action="/search">
+                <input type="text" name="q" placeholder="Nhập sản phẩm cần tìm">
+                <img onclick="this.parentNode.submit()" src="/static/img/icon/kinhlup.png" alt="">
+            </form>
+        </div>
+    </div>
+
+    <div class="margin" style="margin-top: 94px; width: 100%; display: block; height: 1px;" id="margin__top">
+    </div>
+
+
+    <asp:ContentPlaceHolder ID="CommonBody" runat="server">
+
+    </asp:ContentPlaceHolder>
+    <div class="show-form">
+        <div class="form-quick-view frame" id="result-ajax">
+            <!-- ajax trả về data product -->
+        </div>
+
+        <div class="fade" onclick="btnClose(1)">
+        </div>
+
+        <div class="form-cart frame">
+            <a href="javascript:;" class="btn-close" onclick="btnClose(2)">〤</a>
+            <div class="product-name-just-added">
+                <span id="title_cart"></span>
+            </div>
+            <div class="content-cart">
+                <div class="title-cart">
+                    Giỏ hàng của bạn
+                </div>
+                <div class="row-title">
+                    <div class="title-view view-product-info">
+                        Sản phẩm
+                    </div>
+                    <div class="title-view view-product-price">
+                        Giá
+                    </div>
+                    <div class="title-view view-product-quantity">
+                        Số lượng
+                    </div>
+                    <div class="title-view view-product-total-money">
+                        Tổng tiền
+                    </div>
+                </div>
+                <img src="/static/img/icon/loading.gif" id="img_loading"/>
+                <div class="view-product-selected" id="data_session">
+                    <!-- data tu session -->
+                    
+                </div>
+            </div>
+            <div class="check-out">
+                <span>Tổng số thành tiền: </span>
+                <span class="red" id="tong-tien">
+                    240.000
+                </span>
+                <br style="margin: 15px;">
+                <button id="btn-add-to-cart" type="button" onclick="checkout();">Tiến hành thanh toán</button>
+            </div>
+       </div>
+    </div>
+    
+    <footer>
+        <div class="footer__top ">
+            <div class="container flex">
+                <div class="footer__top_logo">
+                    <img src="/static/img/icon/logo.png" alt="">
+                </div>
+
+                <div class="footer__top_descr">
+                    <p>Các Dịch Vụ này không dành cho trẻ em dưới 13 tuổi. Chúng tôi không cố tình thu thập hay lưu giữ bất kỳ dữ liệu cá nhân hay thông tin không nhận dạng cá nhân nào của bất kỳ ai dưới 13 tuổi, bất kỳ phần nào của Nền tảng của chúng tôi hoặc Các Dịch Vụ khác cũng không dành cho trẻ em dưới 13 tuổi. Bố/mẹ hoặc người giám hộ của trẻ em dưới 13 tuổi vui lòng giám sát và đảm bảo thông tin cá nhân của trẻ dưới 13 tuổi mà mình đang giám hộ không đăng tải thông tin cá nhân cho Shopee. Trong trường hợp thông tin cá nhân của của trẻ em dưới 13 tuổi do quý phụ huynh giám hộ được cung cấp cho Shopee, Bố/mẹ hoặc người giám hộ theo đồng ý với việc xử lý thông tin của trẻ em dưới 13 tuổi có liên quan, và đồng ý chịu sự điều chỉnh của Chính Sách này thay mặt cho người được giám hộ. Chúng tôi sẽ khóa bất kỳ tài khoản nào chỉ được sử dụng bởi đối tượng trẻ em như vậy và sẽ gỡ và/hoặc xóa bất kỳ dữ liệu cá nhân nào mà chúng tôi cho là đã được gửi bởi bất kỳ trẻ em nào dưới 13 
+                        tuổi.
+                    </p>
+                </div>
+
+                <div class="footer__top_contact">
+                    <p><a href="tel:0123456789"><b>0123456789</b></a> : Tư vấn bán hàng</p>
+                    <p><a href="tel:0123456789"><b>0123456789</b></a> : Khiếu nại, bảo hành</p>
+                    <p>Thời gian làm việc: 8h - 22h</p>
+                    <p>Góp ý: <a href="mailto:nguyencongminh.official@gmail.com">nguyencongminh.official@gmail.com</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="container flex">
+                <div class="footer__bottom_col1">
+                    <h3>THÔNG TIN</h3>
+                    <p><a href="/">Trang chủ</a></p>
+                    <p><a href="/san-pham">Sản phẩm</a></p>
+                    <p><a href="/">Blog</a></p>
+                    <p><a href="/">Giới thiệu</a></p>
+                    <p><a href="/">Liên hệ</a></p>
+                </div>
+                <div class="footer__bottom_col1">
+                    <h3>HƯỚNG DẪN</h3>
+                    <p><a href="/">Trang chủ</a></p>
+                    <p><a href="/san-pham">Sản phẩm</a></p>
+                    <p><a href="/">Blog</a></p>
+                    <p><a href="/">Giới thiệu</a></p>
+                    <p><a href="/">Liên hệ</a></p>
+                </div>
+                <div class="footer__bottom_col1">
+                    <h3>LIÊN HỆ</h3>
+                    <p><a href="/">Trang chủ</a></p>
+                    <p><a href="/san-pham">Sản phẩm</a></p>
+                    <p><a href="/">Blog</a></p>
+                    <p><a href="/">Giới thiệu</a></p>
+                    <p><a href="/">Liên hệ</a></p>
+                </div>
+                <div class="footer__bottom_col1">
+                    <h3>LIÊN KẾT</h3>
+                    <p><a href="/">Trang chủ</a></p>
+                    <p><a href="/san-pham">Sản phẩm</a></p>
+                    <p><a href="/">Blog</a></p>
+                    <p><a href="/">Giới thiệu</a></p>
+                    <p><a href="/">Liên hệ</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="footer__author">
+            <b>@2021 Bài Tập Lớn Lập Trình Web Cơ Bản</b>
+        </div>
+    </footer>
+    <script type="text/javascript" src="/static/js/js.js"></script>
+</body>
+</html>
